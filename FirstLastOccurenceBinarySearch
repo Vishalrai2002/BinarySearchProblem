@@ -14,7 +14,7 @@ int firstOcc(int *arr, int n, int key)
         if (arr[mid] == key)
         {
             ans = mid;
-            e = mid - 1;
+            e = mid - 1;// for first occurence
         }
         // key badi hai toh right ,key choti hai toh left
         else if (key > arr[mid])
@@ -40,7 +40,7 @@ int lastOcc(int *arr, int n, int key)
         if (arr[mid] == key)
         {
             ans = mid;
-            s = mid + 1;
+            s = mid + 1;// for last occurence
         }
         // key badi hai toh right ,key choti hai toh left
         else if (key > arr[mid])
