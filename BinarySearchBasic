@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+// BINARY SEARCH One condition is check first to start doing binary search function should be always "monotonic" means whether increasing order or in decreasing order.
+//BINARY SEARCH, TIME COMPLEXITY = Olog(N);
+//LINEAR SEARCH, TIME COMPLEXITY = O(N);
+
+int binarySearch(int *arr,int n,int key){
+    
+// s=start,e=end;
+    int s=0,e=n-1;
+    while(s<=e){
+    int mid=s+(e-s)/2; // also use mid= s+e/2;
+       if (arr[mid]==key){
+           return mid;
+       }
+       // key badi hai toh right ,key choti hai toh left
+       else if (arr[mid]>key){
+            e=mid-1;
+       }
+       else if (arr[mid]<key){
+            s=mid+1;
+       }
+    }
+    return -1;
+}
+int main()
+{
+    int arr[6]={1,2,5,6,8,9};
+    int index=binarySearch(arr,6,9);
+    cout<<index<<endl;
+    return 0;
+}
+
+
+
