@@ -1,6 +1,6 @@
 #include<iostream> 
 using namespace std;
-// Program to find the pivot of an array
+// Program to find the pivot of an array means index of smallest element in an array
 int getPivot(int arr[], int n) {
 
     int s = 0;
